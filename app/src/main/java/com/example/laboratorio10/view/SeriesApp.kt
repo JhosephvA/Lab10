@@ -37,7 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 @Composable
 fun SeriesApp() {
-    val urlBase = "http://10.0.2.2:8000/" // o tu IP si usarás un dispositivo externo
+    val urlBase = "http://192.168.1.3:8000/" // o tu IP si usarás un dispositivo externo
     val retrofit = Retrofit.Builder().baseUrl(urlBase)
         .addConverterFactory(GsonConverterFactory.create()).build()
     val servicio = retrofit.create(SerieApiService::class.java)
